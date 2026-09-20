@@ -15,7 +15,6 @@ import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.TERMINOLOGY;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.getByCode;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -45,19 +44,27 @@ public class LanguageAlpha3CodeTest {
 
 
   @Test
-  public void test5() { assertThat(getByCode("???")).isNull(); }
+  public void test5() {
+    assertThat(getByCode("???")).isNull();
+  }
 
 
   @Test
-  public void test6() { assertThat(getByCode("????")).isNull(); }
+  public void test6() {
+    assertThat(getByCode("????")).isNull();
+  }
 
 
   @Test
-  public void test7() { assertSame(LanguageAlpha3Code.jpn, getByCode("jpn")); }
+  public void test7() {
+    assertSame(LanguageAlpha3Code.jpn, getByCode("jpn"));
+  }
 
 
   @Test
-  public void test8() { assertThat(getByCode("JPN")).isNull(); }
+  public void test8() {
+    assertThat(getByCode("JPN")).isNull();
+  }
 
 
   @Test
@@ -1143,7 +1150,7 @@ public class LanguageAlpha3CodeTest {
   }
 
   @Test
-  public void getByCodeIgnoreCaseWithValudValue() {
+  public void getByCodeIgnoreCaseWithValidValue() {
     assertThat(LanguageAlpha3Code.getByCodeIgnoreCase("eng")).isEqualTo(LanguageAlpha3Code.eng);
   }
 
